@@ -1,0 +1,46 @@
+<!doctype HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Backbone.js | Ribbbon</title>
+        <link rel="stylesheet" href="css/base.css"/>
+        <script type="text/template" id="item-template">
+            <div class="reminder-view">
+                <div class="what"><%= what %></div>
+                <input class="edit" value="<%= what %>"></input>
+                <label class="remaining-wrapper">
+                    in
+                    <div class="remaining"></div>.
+                </label>
+                <button class="destroy"></button>
+            </div>
+        </script>
+        <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone-localstorage.js/1.1.7/backbone.localStorage-min.js"></script>
+        <script src="js/models.js"></script>
+        <script src="js/views.js"></script>
+        <script src="js/router.js"></script>
+        <script src="js/app.js"></script>        
+    </head>
+    <body>
+        <section id="reminderapp">
+            <header id="header">
+                <h1>Ribbbon</h1>
+                <form id="reminder-form" action="#">
+                    <label for="reminder-text">Remind me to</label>
+                    <input id="reminder-text" placeholder="do what" required autofocus />
+                    <label for="reminder-time">in</label>
+                    <input id="reminder-time" type="number" placeholder="how long?"/>
+                    <button type="submit" id="create-reminder">Save</button>
+                </form>
+            </header>
+            <section id="main">
+                <ul id="reminder-list"></ul>
+            </section>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,80 @@
+#reminderapp {
+    text-align: center;
+}
+
+@media all and (max-width: 50em) {
+    label[for=reminder-text], label[for=reminder-time] {
+	display: none;
+    }
+
+    #reminder-text, #reminder-time, #create-reminder {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	width: 85%;
+	font-size: 2em;
+    }
+
+    .reminder-view {
+	font-size: 2em;
+	background-color: #eee;
+	width: 100%;
+    }
+
+    .reminder-view > .what {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	display: inline-block;
+	width: 100%;
+    }
+    
+    .reminder-view > .remaining-wrapper {
+	font-size: 12pt;
+	margin-top: -10px;
+	display: block;
+    }
+}
+
+#reminder-list {
+    width:100%;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 10px;
+}
+
+#reminder-list li {
+    list-style-type: none;
+    margin-top: 4px;
+}
+
+#reminder-list li.editing .what {
+    display: none;
+}
+
+#reminder-list li .edit {
+    display: none;
+}
+
+#reminder-list li.editing .edit {
+    display: inline;
+}
+
+.remaining-wrapper {
+    font-style: italic;
+    color: #aaa;
+}
+
+button.destroy {
+    background: url(trash.png) no-repeat;
+    background-size: 20px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+}
+
+.reminder-view > .what, .remaining {
+    display: inline-block;
+}
